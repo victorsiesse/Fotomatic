@@ -87,7 +87,7 @@ nav.desktop ul li {
   font-family: "Roboto";
   color: #4A4A4A;
   line-height: 1.6;
-  margin-right: 40px;
+  margin-right: 2.5rem;
 }
 
 nav.desktop ul li:last-child {
@@ -172,14 +172,14 @@ nav.desktop .icon {
 
 
 #features-section {
-  padding: 0 86px;
+  padding: 0 5.375rem;
   display: flex;
   gap: 38px;
   background-color: #9B9B9B;
 }
 
 .feature {
-  margin-top: 64px;
+  margin-top: 4rem;
   margin-bottom: 46px;
   height: 635px;
   width: auto;
@@ -187,9 +187,9 @@ nav.desktop .icon {
 }
 
 #features-section .image-container {
-  margin: 0 32px;
-  margin-top: 32px;
-  margin-bottom: 40px;
+  margin: 0 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
   width: 90%;
   height: 65%;
 }
@@ -200,8 +200,8 @@ nav.desktop .icon {
 }
 
 #features-section .feature .content {
-  margin: 0 32px;
-  padding: 0 16px;
+  margin: 0 2rem;
+  padding: 0 1rem;
   height: 185px;
 }
 
@@ -314,5 +314,9 @@ footer .content span {
   #sign-up-cta {
     background-color: transparent;
     border: transparent;
+  }
+
+  #features-section .image-container {
+    width: 85%;
   }
 }
