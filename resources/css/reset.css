@@ -130,7 +130,7 @@ nav.desktop .icon {
 
 .header .striking {
   color: white;
-  font-size: 50px;
+  font-size: 3rem;
   font-family: "Rubik";
   line-height: 1.4;
   margin-bottom: 12px;
@@ -300,3 +300,19 @@ footer .content span {
   color: white;
 }
 
+@media only screen and (max-width: 1024px) {
+  .email {
+    display: none;
+  }
+
+  #sign-up-section {
+    padding: 170px 0;
+    display: flex;
+    justify-content: center
+  }
+
+  #sign-up-cta {
+    background-color: transparent;
+    border: transparent;
+  }
+}
