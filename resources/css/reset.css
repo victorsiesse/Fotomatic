@@ -59,7 +59,7 @@ a {
 
 header {
   height: 85px;
-  padding: 0 30px;
+  padding: 0 1.925rem;
 }
 
 header .content {
@@ -69,7 +69,14 @@ header .content {
   align-items: center;
 }
 
-.content .mobile {
+.mobile {
+  display: none;
+}
+.mobile img{
+  display: none;
+}
+
+.mobile .button {
   display: none;
 }
 
@@ -96,32 +103,36 @@ nav.desktop ul li:last-child {
 
 nav.desktop .icon {
   vertical-align: top;
-  height: 20px; 
+  height: 1.25rem; 
 }
 
+
+/* Sign Up Section */
 #sign-up-section {
   padding: 170px 0;
   padding-left: 100px;
-  display: flex;
-  justify-content: flex-start
+}
+
+.banner {
+  background-image: url('./../images/banner-landingpage.jpg');
+  background-size: cover; /* Couvre toute la zone, mais peut être coupée */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center; /* Centre l'image dans la zone */
 }
 
 #sign-up-cta {
-  width: 588px;
+  width: 35.5rem;
   background-color: #9DC20A;
   border: 1px solid #979797;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .header, .email {
-  margin: 0 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 0 5rem;
 }
 
 .header .cursive {
-  margin-top: 32px;
+  margin-top: 2rem;
   color: white;
   font-family: "Damion";
   font-style: italic;
@@ -133,7 +144,7 @@ nav.desktop .icon {
   font-size: 3rem;
   font-family: "Rubik";
   line-height: 1.4;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 .email span {
@@ -145,87 +156,73 @@ nav.desktop .icon {
 .email span strong{
   font-weight: bold;
 }
-.button {
+
+.email .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 408px;
-  height: 64px;
+  width: 25.5rem;
+  height: 4rem;
   background-color: #4A4A4A;
   border-radius: 4px;
   color: white;
-  font-size: 20px;
+  font-size: 1.25rem;
   text-align: center;
   vertical-align: center;
   font-family: 'Roboto';
   font-weight: 500;
-  margin-top: 26px;
-  margin-bottom: 56px;
+  margin-top: 1.675rem;
+  margin-bottom: 3.5rem;
 }
 
-.banner {
-  background-image: url('./../images/banner-landingpage.jpg');
-  background-size: cover; /* Couvre toute la zone, mais peut être coupée */
-  background-repeat: no-repeat; /* Empêche la répétition de l'image */
-  background-position: center; /* Centre l'image dans la zone */
-}
-
-
+/* Features Section */
 #features-section {
-  padding: 0 5.375rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 38px;
   background-color: #9B9B9B;
+  padding: 4rem 4rem 2.925rem 4rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 2.25rem;
 }
 
 .feature {
-  margin-top: 4rem;
-  margin-bottom: 46px;
   height: 635px;
-  width: auto;
   background-color: white;
 }
 
-#features-section .image-container {
-  margin: 0 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2.5rem;
+.feature .image-container {
+  margin: 2rem 2rem 2.5rem 2rem;
   width: 90%;
   height: 65%;
+  overflow: hidden;
 }
 
-#features-section .image-container img {
-  width: 100%;
-  height: 100%;
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-#features-section .feature .content {
+.feature .content h2 {
   margin: 0 2rem;
-  padding: 0 1rem;
-  height: 185px;
-}
-
-#features-section .content h2 {
   color: #4A4A4A;
-  opacity: 100%;
-  font-family: "Roboto";
   font-size: 2.25rem;
+  font-family: "Roboto";
   font-weight: bold;
-  margin-bottom: 20px;
   line-height: 1.2;
 }
 
-#features-section .content h3 {
+.feature .content h3 {
+  margin: 0 2rem;
   color: #4A4A4A;
-  font-family: "Roboto";
   font-size: 1rem;
+  font-family: "Roboto";
   font-weight: lighter;
   line-height: 1.2;
 }
 
+/* Filters Section */
 #filters-section{
-  padding: 64px 1%;
+  padding: 4rem 1%;
   background-color: #4A4A4A;
   display: flex;
   flex-direction: column;
@@ -251,25 +248,19 @@ nav.desktop .icon {
   width: 90%;
 }
 
-#filters-section .images-container {
+.images-container {
   display: flex;
-  margin-top: 80px;
+  margin-top: 5rem;
 }
 
-#filters-section .images-container .image-container {
+.images-container .image-container {
   width: 25%;
   height: auto;
   overflow: hidden;
 }
 
-#filters-section .images-container .image-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 #quotes-section {
-  padding: 80px 0;
+  padding: 5rem 0;
 }
 
 .center {
@@ -280,6 +271,7 @@ nav.desktop .icon {
   color: #4A4A4A;
   font-size: 1.925rem;
   font-style: italic;
+  margin-right: 1.925rem;
 }
 
 footer {
