@@ -69,7 +69,7 @@ h3 {
   font-weight: lighter;
   font-size: 1rem;
   line-height: 1.4;
-  padding: 1rem 4rem;
+  margin-top: 1rem;
 }
 
 .center {
@@ -200,7 +200,7 @@ nav.desktop .icon {
 }
 
 .feature {
-  height: 40rem;
+  max-height: 40rem;
   background-color: white;
 }
 
@@ -211,6 +211,10 @@ nav.desktop .icon {
   overflow: hidden;
 }
 
+.feature .content {
+  margin: 0  2rem;
+  margin-bottom: 3.5rem;
+}
 .image-container img {
   max-width: 100%;
   height: auto;
@@ -303,13 +307,22 @@ footer .content span {
     max-width: 100%;
   }
 
-  #quotes-section .content {
-    justify-content: flex-start;
-    align-items: center;
+  .feature {
+    max-height: 40rem;
   }
-  
+
+  .feature .content {
+    text-align: start;
+  }
+
   .quote {
     width: 60%;
+    text-align: start;
+  }
+
+  .quote-citation {
+    width: 9rem;
+    max-height: 3rem;
   }
 }
 
@@ -367,8 +380,15 @@ footer .content span {
     display: none;
   }
 
+  #quotes-section .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
   .quote {
-    color: #4A4A4A;
+    width: 100%;
+    text-align: center;
     font-size: 1.5rem;
     line-height: 1.4;
   }
