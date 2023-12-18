@@ -57,6 +57,25 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: "Roboto";
+  font-weight: lighter;
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: 1rem 4rem;
+}
+
+.center {
+  text-align: center;
+}
+
 header {
   height: 85px;
   padding: 0 1.925rem;
@@ -64,6 +83,7 @@ header {
 
 header .content {
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -108,9 +128,9 @@ nav.desktop .icon {
 
 .banner {
   background-image: url('./../images/banner-landingpage.jpg');
-  background-size: cover; /* Couvre toute la zone, mais peut être coupée */
-  background-repeat: no-repeat; /* Empêche la répétition de l'image */
-  background-position: center; /* Centre l'image dans la zone */
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center; 
 }
 
 #sign-up-cta {
@@ -175,6 +195,8 @@ nav.desktop .icon {
   display: flex;
   justify-content: space-around;
   gap: 2.25rem;
+  color: #4A4A4A;
+  text-align: left;
 }
 
 .feature {
@@ -195,24 +217,6 @@ nav.desktop .icon {
   display: block;
 }
 
-.feature .content h2 {
-  margin: 0 2rem;
-  color: #4A4A4A;
-  font-size: 2.25rem;
-  font-family: "Roboto";
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-.feature .content h3 {
-  margin: 0 2rem;
-  color: #4A4A4A;
-  font-size: 1rem;
-  font-family: "Roboto";
-  font-weight: lighter;
-  line-height: 1.2;
-}
-
 /* Filters Section */
 #filters-section{
   padding: 4rem 1%;
@@ -220,25 +224,12 @@ nav.desktop .icon {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-#filters-section .content h2 {
   color: white;
   opacity: 100%;
-  font-family: "Roboto";
-  font-size: 2.25rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  width: 90%;
 }
 
-#filters-section .content h3 {
-  color: white;
-  font-family: "Roboto";
-  font-size: 1rem;
-  font-weight: lighter;
-  line-height: 1.4;
-  width: 90%;
+#filters-section .content {
+  max-width: 50%;
 }
 
 .images-container {
@@ -252,18 +243,21 @@ nav.desktop .icon {
   overflow: hidden;
 }
 
-#quotes-section {
+/* Quote Section */ 
+#quotes-section .content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1.925rem;
   padding: 5rem 0;
-}
-
-.center {
-  text-align: center;
 }
 
 .quote {
   color: #4A4A4A;
   font-size: 1.925rem;
+  font-family: "Palatino";
   font-style: italic;
+  line-height: 1.1;
 }
 
 footer {
@@ -301,21 +295,54 @@ footer .content span {
     border: transparent;
   }
 
-  .feature .content h2 {
-    text-align: left;
-  }
-
-  .feature .content h3 {
-    text-align: left;
-  }
-
   #filters-section {
     padding: 4rem 1% 0 1%;
   }
+
+  #filters-section .content {
+    max-width: 100%;
+  }
+
+  #quotes-section .content {
+    justify-content: flex-start;
+    align-items: center;
+  }
   
+  .quote {
+    width: 60%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
+  header {
+    height: 3rem;
+  }
+  
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    width: 100%;
+    display: block;
+  }
+
+  .mobile ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile .button {
+    color: white;
+    font-family: 'Roboto';
+    background-color: #9DC20A;
+    border-radius: 0.25rem;
+  }
+  .mobile a {
+    padding: 3px 8px;
+  }
+
   #features-section {
     background-color: white;
     flex-direction: column;
@@ -326,13 +353,6 @@ footer .content span {
   .feature {
     height: 100%;
     padding-bottom: 30px;
-  }
-  .feature .content h2 {
-    text-align: center;
-  }
-
-  .feature .content h3 {
-    text-align: center;
   }
 
   #filters-section {
