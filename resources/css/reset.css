@@ -72,13 +72,6 @@ header .content {
 .mobile {
   display: none;
 }
-.mobile img{
-  display: none;
-}
-
-.mobile .button {
-  display: none;
-}
 
 .logo {
   font-family: "Roboto Mono";
@@ -185,14 +178,14 @@ nav.desktop .icon {
 }
 
 .feature {
-  height: 635px;
+  height: 40rem;
   background-color: white;
 }
 
 .feature .image-container {
   margin: 2rem 2rem 2.5rem 2rem;
-  width: 90%;
-  height: 65%;
+  max-width: 90%;
+  max-height: 65%;
   overflow: hidden;
 }
 
@@ -271,7 +264,6 @@ nav.desktop .icon {
   color: #4A4A4A;
   font-size: 1.925rem;
   font-style: italic;
-  margin-right: 1.925rem;
 }
 
 footer {
@@ -293,7 +285,7 @@ footer .content span {
   color: white;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {    
   .email {
     display: none;
   }
@@ -309,17 +301,59 @@ footer .content span {
     border: transparent;
   }
 
-  #features-section .image-container {
-    width: 85%;
+  .feature .content h2 {
+    text-align: left;
   }
+
+  .feature .content h3 {
+    text-align: left;
+  }
+
+  #filters-section {
+    padding: 4rem 1% 0 1%;
+  }
+  
 }
 
 @media only screen and (max-width: 480px) {
-  header {
-    height: 48px;
+  #features-section {
+    background-color: white;
+    flex-direction: column;
+    padding: 0 0;
+    gap: 0;
   }
 
-  .content .desktop {
+  .feature {
+    height: 100%;
+    padding-bottom: 30px;
+  }
+  .feature .content h2 {
+    text-align: center;
+  }
+
+  .feature .content h3 {
+    text-align: center;
+  }
+
+  #filters-section {
+    padding: 4rem 0 0 0;
+  }
+  
+  .images-container .image-container {
+    width: 33.33%;
+  }
+
+  .extra {
     display: none;
+  }
+
+  .quote {
+    color: #4A4A4A;
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+  
+  footer .content span {
+    font-size: 0.675rem;
   }
 }
